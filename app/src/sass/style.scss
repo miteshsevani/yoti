@@ -1,0 +1,43 @@
+@import "shared.assets/main";
+
+body {
+
+}
+
+header {
+    background-color: $color-16;
+}
+
+.activity {
+    border: 1px solid $color-14;
+    margin-bottom: 20px;
+    .date-header {
+        background-color: $color-16;
+        padding:10px 20px;
+        border-bottom: 1px solid $color-14;
+        color:$color-3;
+    }
+
+    .activity-content {
+        cursor: pointer;
+        padding:15px;
+        display: flex;     
+        div {
+            display: inline-block;
+            vertical-align: middle;
+            &.activity-timestamp {
+                float: right;
+                text-align: right;
+                color: $color-grey-5;
+                font-size: 14px;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-sm {
+        width: 420px;
+    }
+}
