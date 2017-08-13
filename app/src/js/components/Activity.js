@@ -9,7 +9,7 @@ export default class Activity extends React.Component {
 
     renderActivityItem(activity) {
         return(
-            <ActivityItem key={activity} index={activity} details={data.receipts[activity]} />
+            <ActivityItem key={activity} index={activity} data={data.receipts[activity]} />
         )
     }
 

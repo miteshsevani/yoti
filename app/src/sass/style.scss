@@ -81,7 +81,7 @@ nav {
 
 .modal-sm {
     @media (min-width: 768px) {
-        width: 420px;
+        width: 400px;
     }
 
     .close-icon {
@@ -113,9 +113,13 @@ nav {
         right: 0;
     }
 
-    .modal-title {
-        padding: 40px 0px;            
+    .modal-header {
+        height: 185px;
+        .modal-title {
+            padding: 40px 0px;            
+        }
     }
+    
 
     .modal-body {        
         .information {
@@ -124,17 +128,18 @@ nav {
             text-align: center;
         }
 
-        .title {
-            color: $color-3;
-            font-size: 12px;
-        }
-
-        p {
-            color: $color-2c;
-            &.name {
-                text-transform: uppercase;
+        .attributes {
+            .title {
+                color: $color-3;
+                font-size: 12px;
+            }
+    
+            p {
+                color: $color-2c;
+                &.name {
+                    text-transform: uppercase;
+                }
             }
         }
-
     }
 }
