@@ -18,10 +18,8 @@ export default class Activity extends React.Component {
         return(            
             <Col sm={10}>
                 <h3>Activity</h3>
-                <p>See a record of everyone you have shared details with.</p>
-                
-                {Object.keys(item).map(this.renderActivityItem.bind(this))}
-                
+                <p>See a record of everyone you have shared details with.</p>                
+                {Object.keys(item).map(this.renderActivityItem.bind(this))}                
             </Col>                      
         )
     }

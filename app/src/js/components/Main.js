@@ -12,7 +12,7 @@ export default class Main extends React.Component {
         return(
             <div>         
                 <Header />
-                <Grid>
+                <Grid fluid={true}>
                     <Row>
                         <Menu />
                         <Activity item={ data.receipts } />

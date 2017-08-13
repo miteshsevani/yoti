@@ -1,10 +1,52 @@
 @import "shared.assets/main";
 
+html {
+    min-height: 100%;
+}
 body {
-
+    height: 100%;
 }
 
-header {
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+h3 {
+    margin-top: 0px;
+}
+
+nav {
+    &.navbar {
+        margin-bottom: 0px;
+        .navbar-brand, .status, .selfie {
+            height: 60px;
+            padding: 0px 15px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .navbar-brand {
+            float: none;
+            font-size: 20px;
+            line-height: 24px;        
+        }
+        
+        .status {
+            background: $color-1a;
+            p {
+                float: left;
+                margin: 0px;
+            }
+            .icon-connect-on {
+                float: right;
+                margin: 0 10px;            
+            }
+        }
+    }
+}
+
+.menu {
     background-color: $color-16;
 }
 
@@ -36,8 +78,63 @@ header {
     }
 }
 
-@media (min-width: 768px) {
-    .modal-sm {
+
+.modal-sm {
+    @media (min-width: 768px) {
         width: 420px;
+    }
+
+    .close-icon {
+        position: absolute;
+        cursor: pointer;
+        top: 20px;
+        right: 20px;        
+        @media (min-width: 768px) {
+            top: 0px;
+            right: -30px;
+        }
+        
+        
+    }
+
+    [class^='icon'] {
+        margin: 0 auto;
+    }
+
+    .icon-user_selfie_ph_medium {
+        position: relative;
+        border-radius: 50%;        
+        margin-bottom: 20px;
+    }
+    
+    .icon-logo_circle {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .modal-title {
+        padding: 40px 0px;            
+    }
+
+    .modal-body {        
+        .information {
+            border-bottom: 1px solid $color-14;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .title {
+            color: $color-3;
+            font-size: 12px;
+        }
+
+        p {
+            color: $color-2c;
+            &.name {
+                text-transform: uppercase;
+            }
+        }
+
     }
 }
