@@ -54,7 +54,7 @@ export default class ActivityModal extends React.Component {
                         <div className="information">
                             <div className="icon-selfie">
                                 {/* if receipt ype if 'application' show selfie of ogged in user, otherwise show a placeholder selfie */}
-                                {type==='application' ? <img className="selfie" src="../img/selfie.png" /> : <div className="icon-user_selfie_ph_medium"></div> }
+                                {type==='application' ? <img className="selfie" src="img/selfie.png" /> : <div className="icon-user_selfie_ph_medium"></div> }
                                 <div className="icon-logo_circle"></div>
                             </div>
                             

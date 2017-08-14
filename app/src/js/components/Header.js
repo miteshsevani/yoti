@@ -17,7 +17,7 @@ export default class Header extends React.Component {
                             <div className="icon-connect-on"></div>                            
                         </div>
                         <div className="photo">
-                            <img className="selfie" src="../img/selfie.png" />
+                            <img className="selfie" src="img/selfie.png" />
                         </div>
                     </div>
                 </div>
