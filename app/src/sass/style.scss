@@ -16,10 +16,17 @@ h3 {
     margin-top: 0px;
 }
 
+img {
+    &.selfie  {
+        border-radius: 50%;
+        height: 90%;
+    }
+}
+
 nav {
     &.navbar {
         margin-bottom: 0px;
-        .navbar-brand, .status, .selfie {
+        .navbar-brand, .status, .photo {
             height: 60px;
             padding: 0px 15px;
             display: table-cell;
@@ -48,6 +55,25 @@ nav {
 
 .menu {
     background-color: $color-16;
+    
+    @media screen and (min-width: 768px) {
+        float: left;
+        width: 15%;
+        height: 100vh;
+    }
+    
+
+    ul {
+        li {
+            padding: 10px;
+            background: $color-3a;
+            
+            [class^='icon'] {
+                display: inline-block;
+                margin-right: 10px;
+            }   
+        }
+    }
 }
 
 .activity {
@@ -83,7 +109,7 @@ nav {
     @media (min-width: 768px) {
         width: 400px;
     }
-
+    
     .close-icon {
         position: absolute;
         cursor: pointer;
@@ -97,22 +123,20 @@ nav {
         
     }
 
-    [class^='icon'] {
-        margin: 0 auto;
-    }
-
-    .icon-user_selfie_ph_medium {
-        position: relative;
-        border-radius: 50%;        
-        margin-bottom: 20px;
+    .icon-selfie {
+        position: relative;        
+        margin: 20px auto;
+        width: 130px;
+        img {        
+            width: 100%;
+        }
+        .icon-logo_circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
     
-    .icon-logo_circle {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-
     .modal-header {
         height: 185px;
         .modal-title {
@@ -126,18 +150,27 @@ nav {
             border-bottom: 1px solid $color-14;
             margin-bottom: 20px;
             text-align: center;
+            padding-bottom: 20px;
+
+            [class^='icon'] {
+                margin: 0 auto;
+            }
         }
 
-        .attributes {
-            .title {
-                color: $color-3;
-                font-size: 12px;
-                text-transform: capitalize;
-            }
-    
-            p {
-                color: $color-2c;
+        .attributes {            
+            div {
+                &.attribute {
+                    margin-bottom: 20px;
+                }
+
+                &.title {
+                    color: $color-3;
+                    font-size: 12px;
+                    text-transform: capitalize;
+                }
+
                 &.name {
+                    color: $color-2c;
                     text-transform: uppercase;
                 }
             }

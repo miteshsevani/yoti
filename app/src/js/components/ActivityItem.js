@@ -26,10 +26,11 @@ export default class ActivityItem extends React.Component {
                     <Col sm={12}>                    
                         <div className="activity">
                             <div className="date-header">
+                                {/* Conver n=unix time to readable date and time format */}
                                 {moment.unix(timeStamp).format('DD MMMM YYYY')}                                
                             </div>
                             <div className="activity-content" onClick={this.toggleModal.bind(this)}>
-
+                                {/*  Render and rest modal show state */}
                                 { this.state.showModal ? <ActivityModal resetModal={this.toggleModal.bind(this)} data={data} /> : null }
 
                                 <Col sm={2}>

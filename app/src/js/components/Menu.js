@@ -4,11 +4,9 @@ import { Grid, Row, Col } from 'react-bootstrap';
 export default class Menu extends React.Component {
     render() {
         return(
-            <Col sm={2}>                
-                <aside className="menu">
-                    <ul><li>Activity</li></ul>
-                </aside>
-            </Col>
+            <aside className="menu">
+                <ul><li><div className="icon-activity"></div>Activity</li></ul>
+            </aside>
         )
     }
 }
