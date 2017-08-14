@@ -18,13 +18,15 @@ export default class ActivityItem extends React.Component {
 
     render() {        
         const {data} = this.props;
+        const timeStamp = data.transaction['unix-timestamp'];
+        
         return(
             <div>
                 <Row>
                     <Col sm={12}>                    
                         <div className="activity">
                             <div className="date-header">
-                                {moment.unix(1500394361).format('dddd Mo MMM YYYY')}  
+                                {moment.unix(timeStamp).format('DD MMMM YYYY')}                                
                             </div>
                             <div className="activity-content" onClick={this.toggleModal.bind(this)}>
 
@@ -39,9 +41,9 @@ export default class ActivityItem extends React.Component {
                                 </Col>
                                 <Col sm={4}>
                                     <div className="activity-timestamp">
-                                        {moment.unix(1500394361).format('HH:MM')}
+                                        {moment.unix(timeStamp).format('HH:mm')}
                                         <br />
-                                        {moment.unix(1500394361).format('MM MMMM YYYY')}
+                                        {moment.unix(timeStamp).format('DD MMMM YYYY')}
                                     </div>
                                 </Col>
                             </div>
