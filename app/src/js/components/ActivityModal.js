@@ -57,13 +57,21 @@ export default class ActivityModal extends React.Component {
                             <p>{ type !== "application" ? null : "viewed this information about you" } 
                             <br />at {moment.unix(timeStamp).format('HH:mm [on] DD MMMM YYYY')}</p>
                         </div>
-                        <div className="attributes">
-                            {attributes.map(items => {                                
-                                {Object.keys(items).map((key) => {
-                                    console.log(key, items[key]);
-                                })}
+                        <div className="attributes">                            
+                            {attributes.map((items, index) => {
+                                return (
+                                    <div key={index}>
+                                        {Object.keys(items).map((key) => {
+                                            return (
+                                                <span key={key + index}>
+                                                    <div className='title'>{key.replace("-"," ")}</div>
+                                                    <p className='name'>{items[key]}</p>
+                                                </span>
+                                            )
+                                        })}
+                                    </div>
+                                )
                             })}
-                            <p>I have console logged the attrobutes due to lack of time</p>
                         </div>
                         
                     </Modal.Body>                    
